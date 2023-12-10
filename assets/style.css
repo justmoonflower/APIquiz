@@ -26,8 +26,15 @@ body {
     background-color: white;
     border-radius: 5px;
     padding: 10px;
-
+    font-size: 45px;
+    font-weight: bolder;
 }
+
+h2 {
+    font-size: 30px;
+    font-weight: lighter;
+}
+
 
 .container {
     width: 800px;
@@ -43,4 +50,47 @@ body {
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: 20px 0;
+}
+
+.btn {
+    background-color:rgb(64, 0, 107);
+    border: 1px solid rgb(64, 0, 107);
+    color: white;
+    border-radius: 8px;
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+background-color:rgb(161, 127, 226); 
+}
+
+.btn.correct {
+    background-color: rgb(112, 226, 112);
+}
+
+.btn.wrong {
+    background-color:rgb(226, 127, 135)
+}
+.start-button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.next-button {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
 }

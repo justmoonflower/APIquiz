@@ -10,20 +10,23 @@
   <body>
     <div class="beginning">
       <div id="prompt">Coding Quiz Challenge</div>
-      <h2>Try to correctly answer the following questions about coding. 
+        <h2>Try to correctly answer the following questions about coding. 
           There is a timer that will countdown how much time you have left to answer questions. 
           If you answer a question incorrectly, time will be deducted.</h2>
-      <div id="start-button" class="btn-grid">
-        <button class="btn">Start Quiz</button>
-
+    
     <div class="container">
-      <div id="question-container" class="hide"></div>
+      <div id="question-container" class="hide">
         <div id="question">What allows us to write JavaScript inside the HTML, and add a source attribute to connect the external JavaScript?</div>
         <div id="answer-buttons" class="btn-grid">
           <button class="btn">Script tag</button>
           <button class="btn">Console.log</button>
           <button class="btn">Variables</button>
         </div>
+      </div>
+
+    <div class="controls"></div>  
+      <button id="start-button" class="start-button btn">Start Quiz</button>
+      <button id="next-button" class="next-button btn hide">Next Question</button>
 
 
       <script src="./assets/script.js"></script>
