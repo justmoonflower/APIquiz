@@ -1,31 +1,21 @@
+var quiz = {}
 
-var myQuestions = [
+
+
+data = [
     {
-      question: "_______ allows us to write JavaScript inside the HTML, and add a source attribute to connect the external JavaScript.",
-      answers: {
-        a: "Script tag",
-        b: "Console.log",
-        c: "Variables"
-      },
-      correctAnswer: "a"
+      question: "What allows us to write JavaScript inside the HTML, and add a source attribute to connect the external JavaScript.",
+      choices: ["Script tag", "Console.log", "Variables"],
+      correct: 0
     },
     {
-      question: "_______ is a value that is either true or false.",
-      answers: {
-        a: "String",
-        b: "Number",
-        c: "Boolean"
-      },
-      correctAnswer: "c"
+      question: "What is a value that is either true or false.",
+      choices: ["String", "Number", "Boolean"],
+      correct: 2
     },
     {
-      question: "_______ are used to store groups in a single variable.",
-      answers: {
-        a: "Arrays",
-        b: "Conditions",
-        c: "Methods",
-      },
-      correctAnswer: "a"
+      question: "What are used to store groups in a single variable.",
+      answers: ["Arrays", "Conditions", "Methods"],
+      correct: 0
     }
   ];
-
