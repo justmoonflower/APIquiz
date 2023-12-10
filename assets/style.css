@@ -1,68 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
+*, *::before, *::after {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
   }
-body {
-    background: black;
+
+  :root {
+    --hue-wrong: 0;
+    --hue-correct: 145;
   }
 
-.beginning {
+body {
     background: white;
-    width: 80%;
-    max-width:600px; 
-    margin: 100px auto 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content:center;
+    align-items:center;
     border-radius: 30px;
-    padding: 50px;
-
-}
-.beginning h1 {
-    font-size: 30px;
-    color:black;
-    font-weight:lighter;
 }
 
-.beginning h2{
-    font-size: 20px;
-    color:black;
-    font-weight: lighter;
-}
-
-.quiz {
-    padding: 20px 0;
-}
-
-.quiz h2 {
-    font-size: 18px;
-    color:black;
-    font-weight: lighter;
-}
-
-.button {
-    background-color: rgb(0, 47, 75);
-    color: white;
-    font-weight: lighter;
-    font-size: 20px;
-    width: 100%;
-    padding: 2px;
-    margin: 10px 0;
-    text-align: center;
-    border-radius: 4px;
-    cursor: pointer;
-    display: block;
-}
-
-#next-button {
-    background-color: rgb(86, 196, 86);
-    color: white;
-    font-weight: lighter;
-    font-size: 17px;
-    width: 150px;
-    border: 0;
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
     padding: 10px;
-    margin: 10px auto 0;
-    border-radius: 4px;
-    cursor: pointer;
-    display: block;
+
 }
