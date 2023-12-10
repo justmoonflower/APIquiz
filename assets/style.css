@@ -20,6 +20,15 @@ body {
     border-radius: 30px;
 }
 
+.beginning {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
 .container {
     width: 800px;
     max-width: 80%;
@@ -27,4 +36,11 @@ body {
     border-radius: 5px;
     padding: 10px;
 
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
 }
