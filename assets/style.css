@@ -39,7 +39,7 @@ body {
     font-weight: lighter;
 }
 
-.btn {
+.button {
     background-color: rgb(0, 47, 75);
     color: white;
     font-weight: lighter;
@@ -53,7 +53,7 @@ body {
     display: block;
 }
 
-#next-btn {
+#next-button {
     background-color: rgb(86, 196, 86);
     color: white;
     font-weight: lighter;
