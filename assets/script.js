@@ -3,8 +3,11 @@ var nextButton = document.getElementById("next-button")
 var questionContainerElement= document.getElementById ("question-container")
 var questionElement = document.getElementById("question")
 var answerButtonsElement = document.getElementById("answer-buttons")
+var timerEl = document.getElementById('countdown');
+var mainEl = document.getElementById('main');
+var button = document.createElement("button")
 
-var questions = [
+var question = [
   // First question and answer set
   {
     question: "What allows us to write JavaScript inside the HTML, and add a source attribute to connect the external JavaScript?",
@@ -34,48 +37,49 @@ var questions = [
     }
   ];
 
+function countdown() {
+  var timeLeft = 60;
+  var timeInterval = setInterval(function () {
+    if (timeLeft > 1) {
+      timerEl.textContent = timeLeft + ' seconds remaining';
+      timeLeft--;
+    } else if (timeLeft === 1) {
+      timerEl.textContent = timeLeft + ' second remaining';
+      timeLeft--;
+    } else {
+      timerEl.textContent = '';
+      clearInterval(timeInterval);
+      displayMessage();
+    }
+  }, 1000);
+}
+
 
 startButton.addEventListener("click", startGame)
-nextButton.addEventListener("click", nextQuestion)
+startButton.addEventListener("click", countdown)
+nextButton.addEventListener("click", showQuestion)
+answerButtonsElement.addEventListener("click", selectAnswer)
 
 
 function startGame() {
   startButton.classList.add("hide")
   currentQuestionIndex = 0
   questionContainerElement.classList.remove("hide")
-  setNextQuestion()
+  showQuestion()
 }
 
-
-
 function showQuestion(question) {
+  nextButton.classList.remove("hide")
   questionElement.innerText = question.question
   question.answers.forEach(answer => {
-    var button = document.createElement("button")
     button.innerText = answer.text
     button.classList.add("btn")
     if (answer.correct) {
       button.dataset.correct = answer.correct
     }
-    button.addEventListener("click", selectAnswer)
-    answerButtonsElement.appendChild(button)
 })
 }
 
-
-function setNextQuestion() {
-  nextButton.classList.remove("hide")
-  showQuestion()
-
-}
-
-function resetState() {
-nextButton.classList.remove("hide")
-while (answerButtonsElement.firstChild) {
-  answerButtonsElement.removeChild
-  (answerButtonsElement.firstChild)
-}
-}
 
 function selectAnswer(e) {
   var selectedButton = e.target
@@ -89,7 +93,6 @@ function selectAnswer(e) {
 }
 
 function setStatusClass(element, correct) {
-  clearStatusClass(element)
   if (correct) {
     element.classList.add("correct")
   } else {
